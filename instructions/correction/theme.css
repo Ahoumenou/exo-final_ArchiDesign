@@ -1,0 +1,540 @@
+*,
+*::backdrop,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100%;    
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.container{
+    
+    max-width: 90%;
+    margin: auto;
+}
+/* ------------------------------------------------------------------- */
+
+/* Instruction */
+
+/* Intégration responsive en retrofitting / desktop first
+Le contenu a un maximum de 1500px de large mais les fonds de couleur de l'entête et du pied de pge font toute la largeur de la fenêtre du navigateur quelque soit sa taille.
+Les points de rupture :
+- 1100px pour tablette
+- 780px pour mobile
+- petits mobiles 630px
+
+COULEURS
+- fond turquoise : #00748D
+- jaune orangé : #CB8606
+- fond gris clair: #f9f9f9
+- texte : #414141
+
+POLICES
+- Par défaut : Nunito (Google fonts)
+- Titres et nav : Fjalla One (Google fonts)
+
+TAILLE DES POLICES
+- par défaut : 18px
+- titre du site : 20px
+- menu : 20px
+- titre de la page d'accueil : 30px et 20px
+- titre des pages intérieures : 30px
+- sous-titres : 25px
+- titres articles : 20px
+- textes colonne de droite : 16px
+- auteurs : 14px
+
+Les pictos des réseaux sociaux sont des Font Awesome */
+
+/* -------------------------------------------------------------------------------- */
+
+/* Accueil */
+.div-header{
+    display: flex;
+    background-color: #00748D;
+    justify-content: space-between;
+}
+.div-header ul nav{
+    display: flex;
+    /* margin: 2rem 5rem; */
+}
+.div-header ul li{
+   list-style: none;
+}
+.div-header ul li a{
+    display: block;
+    padding:10px;
+    margin-right: 4rem;
+    margin-top: 1rem;
+   text-decoration: none;
+   color: white;
+}
+.div-header ul li a:hover,
+.div-header ul li a:focus{
+ background-color: #f9f9f9;
+ color: #00748D;
+ border:1px solid #00748D;
+}
+figure{
+    display: flex;
+    gap: 2px;
+    /* width: 100%; */
+}
+
+figcaption{
+    margin-block:0;
+    width: 17rem;
+    padding-block: 0;
+    padding-top: 1.5rem;
+    color: #fff;
+    /* padding-top: 1.5rem; */
+    margin-left:0;
+    font-size: 2rem;
+    /* font-weight: bold; */
+}
+header{
+    width: 100%;
+    height: 400px;
+    background: url(../images/bg-header.jpg) no-repeat 100% center / cover;
+    text-align: center;
+}
+header>img{
+    
+    display: block;
+    max-width: 100%;
+    height: 100rem;
+}
+header h1{
+    width: 15rem;
+    padding: 3px;
+    font-size: 1rem;
+     /* margin-top: 5rem;
+     margin-bottom: 1rem; */
+     /* margin: 2rem auto; */
+    color: #fff;
+   margin-inline: 45%;
+    background-color: #CB8606;
+}
+.gb{
+    text-align: center;
+}
+header span{
+    display: block;
+    width: 30rem;
+    /* margin: auto; */
+    display: inline;
+    padding: .5rem;
+     color: #00748D;
+    background-color: #f9f9f9;
+}
+/* ------------------------------------------------- */
+.icon-footer{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #00748D;
+    
+}
+.icon-footer div{
+padding: 2rem 10rem;
+font-size: 1.5rem;
+    
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+main h2 {
+    text-align: center;
+    color: #00748D;
+    
+}
+/* home desktop par defaut */
+.container section:nth-child(2){
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: justify;
+    margin-block: 5rem;
+}
+.container section:nth-child(2) h2{
+    font-size: 1.5rem;
+    color: black;
+}
+.container section:nth-child(2) i{
+    background-color: #CB8606;
+    font-size: 3rem;
+  color:#ffff;
+  padding: 1rem;
+  margin-left: 10rem;
+}
+.container section:nth-child(2) article a{
+text-align: center;
+ color:#fff;
+ background-color: #00748D;
+display: block;
+padding: 1rem;
+margin-inline:1rem ;
+}
+.grid-image{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.grid-image article{
+border: 2px solid #00748D;
+}
+/* tablette */
+@media screen and (max-width:1100px) {
+    header{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      
+    }
+    header figure{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header > .div-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header figcaption{
+        display: block;
+        font-size: 1.5rem;
+    }
+    .div-header img{
+        max-width: 80%;
+    }
+    .div-header ul nav li a {
+        /* padding: 10px; */
+        /* margin-right: 4rem; */
+        /* margin-top: 1rem; */
+        display: block;
+      margin-left:5rem;
+    }
+
+    /* ------ */
+    .container section:nth-child(2),
+    .container section:nth-child(3) >div{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+         gap: 2rem;
+        text-align: justify;
+        margin-block: 5rem;
+    }
+    .container section:nth-child(3) >div{
+         gap: 10rem;
+       
+    }
+    .icon-footer div{ 
+        padding:2rem 1rem;
+     }
+     /* .container section:nth-child(2) i{
+        background-color: #CB8606;
+        font-size: 3rem;
+      color:#ffff;
+      padding: 1rem;
+      margin-left: 0rem;
+    } */
+}
+
+/* mobile */
+@media screen and (max-width:780px) {
+    .div-header ul nav li a {
+        display: block;
+        width: 8rem;
+    }
+    .div-header ul nav li{
+        max-width: 10rem;
+        /* margin-right: 1rem; */
+    }
+    .div-header ul nav{
+        
+        margin-right: 3rem;
+    }
+    .div-header ul {
+        text-align: center;
+       padding-left: 0;
+    }
+   
+    
+    /* ----------- */
+    .container section:nth-child(2),
+    .container section:nth-child(3) >div{
+     
+        display: flex;
+       flex-direction: column;
+         gap: 2rem;
+        text-align: justify;
+        /* margin-block: 5rem; */
+    }
+    .container section:nth-child(3) >div{
+     
+        display: flex;
+       flex-direction: column;
+        max-width: 200px;
+        aspect-ratio: 1;
+        margin: 4rem auto;
+    }
+    .container section:nth-child(2) i{
+      margin-left: 18rem;
+    }
+    /* ------ */
+    .icon-footer{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .icon-footer figure{ 
+       align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+  
+}
+
+/* petit mobile */
+@media screen and (max-width:640px) {
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header ul nav{
+        display: flex;
+        flex-direction: column;
+    }
+    header ul nav li a{
+       padding-inline: 500rem;
+        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+    header h1,
+    header span{
+        display: none;
+    }
+    .container section:nth-child(2) i{
+        background-color: #CB8606;
+        font-size: 3rem;
+      color:#ffff;
+      padding: 1rem;
+      margin-left: 12rem;
+    }
+}
+
+/* ------------------------------- */
+
+/* actualité */
+.wraper-article{
+    max-width: 100%;
+    margin:2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.parti1{
+   flex-basis: 50%;
+}
+.part2{
+  flex-basis:50%;
+}
+.div-section{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows:  200px;
+   gap:1rem;
+}
+.div-section img{
+    width: 100%;
+  height: 95%;
+}
+.div-section a{
+    margin-top: 3rem;
+    padding: .5rem;
+    color: #fff;
+    background-color: #00748D;
+}
+.titre::before{
+    content: url(../images/client.png);
+}
+.paragraphe::before{
+    content: url(../images/quote.png);
+}
+.section-flow{
+    height: 20rem;
+    overflow: scroll;
+}
+.section-liste ul {
+   list-style: none;
+   padding-left: 0;
+   list-style-image: url(../images/circle.png);
+}
+
+
+/* tablette */
+
+@media screen and (max-width:1100px) {
+    .wraper-article{
+        max-width: 100%;
+        margin:2rem;
+        display: flex;
+       flex-direction: column;
+    }
+    .parti1{
+       flex-basis: 80%;
+    }
+    .part2{
+      flex-basis: 20%;
+    }
+    .div-section{
+        display:flex;
+        flex-direction: column;
+        margin-block: 5rem;
+      
+     }
+     .part2{
+        display: flex;
+        justify-content: space-between;
+       
+      }
+      .section-flow{
+         flex-basis: 30%;
+    }
+    .section-liste {
+       flex-basis: 65%;
+    }
+    .section-liste ul{
+     line-height: 2rem;
+    }
+}
+
+/* mobile */
+@media screen and (max-width:780px) {
+    .part2{
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* ----------------------------------------- */
+/* Realisation */
+.container-image p img{
+  max-width: 100%;
+  border: 2px solid #00748D;
+}
+
+.container-image{
+   
+  display: grid;
+  grid-template-areas: 
+    "image1 image2 image3 image4"  
+    "image5 image6 image3 image7"
+    "image5 image8 image9 image10"
+    "image11 image12 image13 image10"
+    "image14 image12 image15 image16"
+    ;
+    column-gap: 1rem;
+}
+
+.image1{
+    grid-area:image1;
+}
+.image2{
+    grid-area:image2;
+}
+.image3{
+    grid-area:image3;
+}
+.image4{
+    grid-area:image4;
+}
+.image5{
+    grid-area:image5;
+}
+.image6{
+    grid-area:image6;
+}
+.image7{
+    grid-area:image7;
+}
+.image8{
+    grid-area:image8;
+}
+.image9{
+    grid-area:image9;
+}
+.image10{
+    grid-area:image10;
+}
+.image11{
+    grid-area:image11;
+}
+.image12{
+    grid-area:image12;
+}
+.image13{
+    grid-area:image13;
+}
+.image14{
+    grid-area:image14;
+}
+.image15{
+    grid-area:image15;
+}
+.image16{
+    grid-area:image16;
+}
+
+/* -----------------
+*/
+
+/* tablette */
+
+
+/* mobile */
+
+@media screen and (max-width:760px) {
+    
+    .container-image{
+       
+        display: grid;
+        grid-template-areas: 
+       "image1 image2"
+       "image3 image4"
+       "image3 image5"
+       "image6 image5"
+       "image7 image8"
+       "image9 image10"
+       "image11 image10"
+       "image12 image13"
+       "image12 image14"
+       "image15 image16"
+      
+          ;
+          column-gap: 1rem;
+      }
+
+   
+}
+
+
+
+
+
+
+
+
+
